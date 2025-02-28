@@ -1,0 +1,936 @@
+<!-- classViewReform.html -->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/jquery.smart_autocomplete.js"></script>
+
+    <link rel="stylesheet" href="/css/smoothness/jquery-ui.css?v=1">
+    <link rel="stylesheet" href="/css/style.css?v=1">
+    <link rel="stylesheet" href="/css/generalStyling.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <style type="text/css">
+        #back_to_search {
+            width: 100px;
+            background: #EAA;
+            margin-top: 10px;
+            padding: 4px 5px 3px 5px;
+            text-align: center;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .lessons {
+            width: auto;
+        }
+
+        .subClassTitle {
+            /*cursor: pointer;*/
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+        }
+
+        .calenderIconSizer {
+            width: 15px;
+            height: auto;
+            margin-bottom: -2px;
+            /*vertical-align: middle;*/
+            text-decoration: none;
+        }
+
+        .calenderSubclass {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .aSubclass {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .printSubclass {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .printSubclass img {
+            height: 20px;
+            vertical-align: middle;
+            border: none;
+        }
+
+        .aSubclass h3 {
+            padding: 5px;
+            padding-left: 25px;
+        }
+
+        .printClassContainer {
+            float: right;
+        }
+
+        .printClassContainer > a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .printIconSizer {
+            height: 20px;
+            vertical-align: middle;
+            border: none;
+        }
+
+        .spaceMe {
+            position: relative;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .kladde {
+            float: right;
+            font-size: 16pt;
+            color: red;
+            padding-right: 1em;
+        }
+
+        .tempgroupheader {
+            font-weight: bold;
+            padding: 0em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+
+<p class="printClassContainer">
+    <a class="buttonMe" href="/class/pdf/34803/da">
+        <img class="printIconSizer" src="/images/pdf_icon.png"/>PDF til print
+    </a>
+    <a class="buttonMe" href="/ical/guide/class/34803" target="_blank">
+        <img class="calenderIconSizer" src="/images/calendar.ico"/> Find kalender
+    </a>
+</p>
+
+
+<!--
+	<div id="back_to_search">
+		<a href="">Tilbage til søgning</a>
+	</div>
+-->
+<h2 class="classtitle">Specialiseringskursus: Digital Leder</h2>
+
+
+<div href="NONE">
+    <table class="class">
+        <tr>
+            <td>
+                Titel
+            </td>
+            <td>
+                <div class="classtext">
+                    Specialiseringskursus: Digital Leder
+                </div>
+            </td>
+        </tr>
+
+        <!-- Oversat titel for dansk skabelon -->
+                <tr>
+            <td>
+                Oversat titel
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Specialisation course: Digital Manager</p>
+
+                </div>
+            </td>
+        </tr>
+                <tr>
+            <td>
+                Semester
+            </td>
+            <td>
+                <div class="classtext">
+                    F2025
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Kandidatuddannelse i
+            </td>
+            <td>
+                <div class="classtext">
+                    Digital Transformation
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Aktivitetstype
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Valgfrit</p><p>Det er obligatorisk, at man skal vælge ét af specialiseringskurserne. Det er valgfrit at vælge ml. Digital Leder eller Digital Designer.</p>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Undervisningssprog
+            </td>
+            <td>
+                <div class="classtext">
+                    Dansk
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Studieordning
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Læs mere om uddannelsen og find din studieordning på <a href="https://ruc.dk/kandidat/uddannelser" title="ruc.dk">ruc.dk</a></p>
+
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="tempgroupheader">
+                                <span>TILMELDING OG STUDIEADMINISTRATIV DATA</span>
+                            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Tilmelding
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Du skal tilmelde dig på <a href="https://stadssb.ruc.dk/sb_stax/sb/" title="">stads</a> i tilmeldingsperioden, som du kan se på <a href="https://intra.ruc.dk/dk/for-studerende/student-hub/studieadministration/" title="">intra</a></p>
+
+<p>Tilmelding til projekteksamen: Du skal huske at bekræfte din tilmelding til projektet, ved at tilmelde dig eksamen med din projektgruppe, når projektdannelsen er slut. Du skal tilmelde dig via <a href="https://stadssb.ruc.dk/sb_stax/sb/" title="">stads</a></p>
+
+<p>Når du tilmelder dig studieaktiviteter, skal du være opmærksom på, om undervisning og eksamen i de forskellige studieaktiviteter er på samme tidspunkt. RUC planlægger studieaktiviteter sådan, at der ikke er overlap, hvis du følger dit anbefalede studieforløb. I forhold til valgfrie elementer og studieplaner, som afviger fra det anbefalede studieforløb, kan der dog forekomme overlap, alt efter hvilke kurser du vælger.</p>
+
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Deltagerantal
+            </td>
+            <td>
+                <div class="classtext">
+                    
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ECTS
+            </td>
+            <td>
+                <div class="classtext">
+                    10
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Aktivitetsansvarlig
+            </td>
+            <td>
+                <div class="classtext">
+                    Jan Pries-Heje (<a href="mailto:janph@ruc.dk">janph@ruc.dk</a>)<br>Nina Boulus-Rødje (<a href="mailto:ninabr@ruc.dk">ninabr@ruc.dk</a>)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Studieleder
+            </td>
+            <td>
+                                                <div class="classtext">
+                    Nina Boulus-Rødje (<a href="mailto:ninabr@ruc.dk">ninabr@ruc.dk</a>)
+                </div>
+                                                            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                Undervisere
+            </td>
+            <td>
+                <div class="classtext">
+                    
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Studieadministration
+            </td>
+            <td>
+                <div class="classtext">
+                    IMT Tilmelding & Eksamen (<a href="mailto:imt-eksamen@ruc.dk">imt-eksamen@ruc.dk</a>)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Aktivitetsnummer
+            </td>
+            <td>
+                <div class="classtext">
+                    U60081
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="tempgroupheader">
+                                <span>FAGLIGT INDHOLD</span>
+                            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Overordnet formål
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Formålet med specialiseringskurserne er at give de studerende mulighed til at specialisere sig inden for digital ledelse og sætte de studerende i stand til at forstå samspillet mellem det digitale, organisationen og forretningen, samt sikre samspil med virksomhedens it-arkitektur, forretningsmodeller, digitalisering strategier, ledelse og styring</p>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Uddybende beskrivelse
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Kurset giver deltagerne avanceret indblik og færdigheder i aspekterne af at kunne agere som digital leder forstået som at have digitalt lederskab. Kursets formål er at give de studerende indsigt i og kompetencer til at:</p>
+
+<ul>
+<li>Identificere og diskutere udfordringer og potentialer inden for digitalt lederskab, it-strategi, den organisatoriske struktur og den underliggende it-arkitektur.</li>
+<li>Applikere og reflektere over teorier og metoders styrker og svagheder i at analysere, redesigne og implementere forskellige aspekter af digitalt lederskab, it-strategi, den organisatoriske struktur og den underliggende it-arkitektur.</li>
+<li>Vurdere, kritisere og argumentere for teorier og metoders styrker og svagheder til at understøtte digitalt lederskab, it-strategi, den organisatoriske struktur og den underliggende it-arkitektur.</li>
+</ul>
+
+<p>Kurset består af lektioner hvor oplæg og øvelser baseret på teorien er blandet. I øvelserne vil der gøres brug af en eller flere eksemplariske cases med formålet at opnå læringsmålene.</p>
+
+<p>Kurset giver deltagerne avanceret indblik og færdigheder i aspekterne af at kunne agere som digital leder forstået som at have digitalt lederskab og kompetence.</p>
+
+<p>I kurset gennemgås forskellige emner med teorier og metoder som beskriver og hjælper med at udfylde grundområderne af digitalt lederskab. Fx.</p>
+
+<ul>
+<li><p>Enterprise arkitektur: herunder it-arkitektur, arkitektens rolle, systemtænkning, proces og værktøjskasse.</p></li>
+<li><p>Proces-innovation: herunder scenariebeskrivelser, procestænkning, værdikæder og modellering af disse, samt business proces management.</p></li>
+<li><p>IT-strategi: herunder langtidsplanlægning, positionering, alignment forretningsmodeller, vision og strategieksekvering</p></li>
+<li><p>IT-governance: herunder evidensbaseret ledelse, rolledefinition, compliance mm.</p></li>
+<li><p>Udbud og kravspecifikation- Kompleksitet: herunder assessment, definition og mitigation, samt forskellen på navigation og reduktion.</p></li>
+<li><p>Evaluering af og med it: herunder gevinstdefinition, gevinstmåling, gevinstrealisering.</p></li>
+</ul>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Pensum
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Litteratur og materialeliste vil bestå af centrale bøger, samt det nyeste state-of-the-art forskningslitteratur inden for digitalt lederskab.</p>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Tilrettelæggelse og indsats
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Kurset er bygget op omkring to ugentlige mødedage med lektioner og øvelser. Øvelser og præsentationer vil blive blandet 50/50 af lektionstiden.</p>
+
+<p>Kurset afholdes parallelt med specialiseringsprofil-projektet, hvor de studerende anvender grundlæggende aspekter fra kurset Digital Leder og arbejder med en case-virksomhed i grupper.</p>
+
+<p>De studerende afleverer i grupper en refleksionsrapport som skriftlig aflevering baseret på udvalgt litteratur fra kurset, som skal illustrere de studerendes evner til at tilegne sig, applikere, vurdere og reflektere over viden på området inden for Digital Leder. Refleksionsrapporten bør omfatte udvalgte områder inden for digitalt lederskab, samt tage udgangspunkt i at formidle, anvende og applikere konkret litteratur til et konkret eksempel og forholde sig kritisk reflekterende hertil. Refleksionsrapportens krav til indhold og struktur opgives i starten af kurset.</p>
+
+<p><strong>Studieindsats</strong></p>
+
+<p>Kurset er 10 ECTS, svarende til en arbejdsbelastning på cirka 270 timer.</p>
+
+<p>Den ugentlige belastning i de første 8 uger vil være ca. 18 timer, hvoraf 7 vil være konfrontationstid og og 11 timers forberedelse.</p>
+
+<p>De sidste 8 uger vil arbejdsbelastning være 11 timer (3,5 timers konfrontationstid og 7,5 timers forberedelse.</p>
+
+<p>(Det vil sige i alt 84 timers konfrontation og 148 timers forberedelse).</p>
+
+<p>Der må desuden forventes cirka 40 timer til eksamen inkl. forberedelse.
+Læringsaktiviteter Holdundervisning og øvelser. Der vil også blive arbejdet med gruppearbejde der kan supplere det sideløbende projektarbejde. Lektionerne vil bestå af 100 minutters præsentation og 100 minutter øvelser.</p>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Udbudsformat 
+            </td>
+            <td>
+                <div class="classtext">
+                    
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Undervisningsevaluering
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Kurset evalueres formativt første gang ca efter 8 uger og til sidst i kursusforløbet. Målet er en konstruktiv dialog så kurset efter behov kan ændres undervejs i en retning der passer til holdet.</p>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Program
+            </td>
+            <td>
+                <div class="classtext">
+                    
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="tempgroupheader">
+                                <span>BEDØMMELSE</span>
+                            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Læringsmål 
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>De studerende vil oparbejde viden og færdigheder til at</p><ul><li><p>beskrive, analysere, diskutere og kritisk reflektere over forretningsmodeller og -områder hvor det digitale spiller en særligt væsentlig rolle i at transformere organisationen i en bæredygtig retning</p>
+</li><li><p>beskrive, analysere, diskutere og kritisk reflektere over samspillet (alignment) mellem det digitale, organisationen og forretningen, samt sikre samspil med virksomhedens it-arkitektur (enterprise arkitektur), ledelse og styring (governance)</p>
+</li><li><p>udarbejde, begrunde og formidle nye løsningsmodeller på problemstillinger og udfordringer, som nye forretningsmodeller og digitaliseringsstrategier potentielt giver.</p>
+</li></ul>
+                </div>
+            </td>
+        </tr>
+
+                                                                                                                                        <tr>
+            <td>
+                Prøveform <!-- (p3) -->
+            </td>
+            <td>
+                <div class="classtext">
+                                        Individuel mundtlig prøve på baggrund af skriftlig aflevering<br/><br/>Det skriftlige produkt skal have et omfang på maksimalt 48.000 tegn inkl. mellemrum. <br/>Omfangskravene er inklusive eventuel forside, indholdsfortegnelse, litteraturliste, figurer og andre illustrationer, men eksklusive eventuelle bilag.<br/><br/>Eksaminationstid inkl. votering: 30 minutter.<br/><br/>Bedømmelsen er en samlet bedømmelse af de(t) skriftlige produkt(er) og den mundtlige prøve.<br/><br/><br/>Tilladte hjælpemidler til prøven: alle<br/><br/>Bedømmelse: 7-trinsskala<br/>Censur: intern medbedømmer
+                                    </div>
+            </td>
+        </tr>
+                                <tr>
+            <td>
+                Omprøveform <!-- (p3) -->
+            </td>
+            <td>
+                <div class="classtext">
+                                        Samme som ordinær eksamen / same form as ordinary exam
+                                    </div>
+            </td>
+        </tr>
+                                
+        <tr>
+            <td>
+                Prøveform ved særlige tilfælde
+            </td>
+            <td>
+                <div class="classtext">
+                    
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Prøveform og bedømmelses-kriterier (udmøntet)
+            </td>
+            <td>
+                <div class="classtext">
+                    <p>Den mundtlige eksamen indledes af en fællesoplæg af projektet der afholde af de studerende i en gruppe.</p>
+
+<p>Fælles oplægget efterfølges af individuelle eksaminering af den studerende, med spørgsmål som kan tage udgangspunkt i hele pensum samt den valgte litteratur til den skriftlige rapport i dialog med eksaminator og studerende.</p>
+
+<p>Bedømmelseskriterier
+- Den fuldstændige opfyldelse opnås ved en sikker demonstration af (a) solid viden, indsigt og overblik over begrebsområderne (b) solid beskrivelse, kompetent applikation og kritisk refleksion ift. egen brug af teorier og metoder samt (c) sikker, klar og tydelig, velstruktureret og selvstændig samt konceptuelt korrekt skriftlig formidling.
+- Den gode opfyldelse opnås ved at den studerende demonstrerer (a) viden om og indsigt i begrebsområderne (b) klar og tydelig beskrivelse samt forholdsvis kompetent applikation af egen brug af teorier og metoder samt (c) en klar og tydelig organisering og skriftlige formidling.
+- Den minimalt accepterede beståelse opnås ved at den studerende demonstrerer (a) en tilstrækkelig men begrænset viden om begrebsområderne (b) en tilstrækkelig redegørelse og applikation af egen brug af teorier og metoder samt (c) en tilstrækkelig men usikker organisering og skriftlig formidling.</p>
+
+<p>I bedømmelsen af det skriftlige produkt vil der blive lagt vægt på i hvor høj udstrækning den studerende kan:
+- Redegøre og formidle litteratur og viden der ligger inden for grundområderne digitalt lederskab.
+- Applikere litteratur inden for grundområderne for digitalt lederskab til et konkret eksempel med særligt fokus på fremtidig læring og handling.
+- Kombinere og evaluere litteratur og viden om grundområderne inden for digitalt lederskab
+- Kritisk reflektere over eget valg af teori, metode og empiribearbejdning Producere en opgave der opfylder alle formelle krav.
+- Stave- og formuleringsevnen i projektrapporten/specialet indgår i bedømmelsen med vægten 10%</p>
+
+<p>I bedømmelsen af den mundtlige præstation vil der blive lagt vægt på i hvor høj udstrækning den studerende kan:
+- selvstændigt reflektere over og diskutere styrker og svagheder ved det skriftlige produkt og tilgangen til processen
+- analysere udvalgt litteratur og diskutere alternative tilgange til grundområderne for digitalt lederskab ift. resten af pensum.
+- demonstrere evner til kontinuerligt at forstå og reflektere over egen praksis som digital leder.</p>
+
+                </div>
+            </td>
+        </tr>
+
+
+        <!-- STO data loop -->
+        <!--
+                    <tr
+                <td>>
+                    
+                </td>
+                <td>
+                    <div class="classtext">
+                        
+                    </div>
+                </td>
+            </tr>
+                    <tr
+                <td>>
+                    
+                </td>
+                <td>
+                    <div class="classtext">
+                        
+                    </div>
+                </td>
+            </tr>
+                    <tr
+                <td>>
+                    
+                </td>
+                <td>
+                    <div class="classtext">
+                        
+                    </div>
+                </td>
+            </tr>
+                    <tr
+                <td>>
+                    
+                </td>
+                <td>
+                    <div class="classtext">
+                        
+                    </div>
+                </td>
+            </tr>
+                    <tr
+                <td>>
+                    
+                </td>
+                <td>
+                    <div class="classtext">
+                        
+                    </div>
+                </td>
+            </tr>
+                -->
+
+        
+
+                                <tr>
+            <td>Eksamenskode(r)</td>
+            <td style="width:100%">
+                <fieldset>
+                    <!--                        <legend>kandidatkursus</legend>
+                    -->
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:33%">Eksamenskode(r) : U60081</td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr>
+                        
+        <tr>
+            <td>Sidst ændret</td>
+            <td>08/11/2024</td>
+        </tr>
+    </table>
+
+    <h1>Undervisningsgange:</h1>
+        <div class="subclasses">
+                <div class="aSubclass">
+            <h2 class="subClassTitle">
+                <span class="subClassUnfold buttonMe">Vis kursusgange for Hold: 1</span>
+                <a class="calenderSubclass spaceMe pull-right buttonMe"
+                   href="/ical/guide/class/34803/34803/" target="_blank">
+                    <img class="calenderIconSizer" src="/images/calendar.ico"/> Find kalender (1)
+                </a>
+                <a class="printSubclass spaceMe pull-right buttonMe"
+                   href="/class/pdf/34803/da/34803">
+                    <img src="/images/pdf_icon.png"/> PDF til print (1)
+                </a>
+            </h2>
+            <div class="lessons ">
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        06-02-2025 08:15
+                        -
+                                                06-02-2025 12:00
+                        i uge 06
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221601"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        11-02-2025 12:15
+                        -
+                                                11-02-2025 16:00
+                        i uge 07
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221609"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        13-02-2025 08:15
+                        -
+                                                13-02-2025 12:00
+                        i uge 07
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221610"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        18-02-2025 12:15
+                        -
+                                                18-02-2025 16:00
+                        i uge 08
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221602"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        20-02-2025 08:15
+                        -
+                                                20-02-2025 12:00
+                        i uge 08
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221613"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        25-02-2025 12:15
+                        -
+                                                25-02-2025 16:00
+                        i uge 09
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221608"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        27-02-2025 08:15
+                        -
+                                                27-02-2025 12:00
+                        i uge 09
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221593"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        04-03-2025 12:15
+                        -
+                                                04-03-2025 16:00
+                        i uge 10
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221594"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        06-03-2025 08:15
+                        -
+                                                06-03-2025 12:00
+                        i uge 10
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221595"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        11-03-2025 12:15
+                        -
+                                                11-03-2025 16:00
+                        i uge 11
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221596"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        13-03-2025 08:15
+                        -
+                                                13-03-2025 12:00
+                        i uge 11
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221597"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        18-03-2025 12:15
+                        -
+                                                18-03-2025 16:00
+                        i uge 12
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221598"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        20-03-2025 08:15
+                        -
+                                                20-03-2025 12:00
+                        i uge 12
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221599"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        25-03-2025 12:15
+                        -
+                                                25-03-2025 16:00
+                        i uge 13
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221600"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        27-03-2025 08:15
+                        -
+                                                27-03-2025 12:00
+                        i uge 13
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221604"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        01-04-2025 12:15
+                        -
+                                                01-04-2025 16:00
+                        i uge 14
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221612"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        03-04-2025 08:15
+                        -
+                                                03-04-2025 12:00
+                        i uge 14
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221611"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        08-04-2025 12:15
+                        -
+                                                08-04-2025 16:00
+                        i uge 15
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221607"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        10-04-2025 08:15
+                        -
+                                                10-04-2025 12:00
+                        i uge 15
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221603"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Tirsdag
+                        22-04-2025 12:15
+                        -
+                                                22-04-2025 16:00
+                        i uge 17
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221614"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Torsdag
+                        08-05-2025 10:00
+                        -
+                                                08-05-2025 10:00
+                        i uge 19
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder - Aflevering af skriftlig prøve (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221615"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Onsdag
+                        11-06-2025 08:15
+                        -
+                                                Torsdag
+                                                12-06-2025 18:00
+                        i uge 24
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder - Mundtlig prøve (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221605"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Onsdag
+                        13-08-2025 10:00
+                        -
+                                                13-08-2025 10:00
+                        i uge 33
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder - Aflevering af skriftlig omprøve (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221631"></div>
+                                <h3>
+                    <div style="width:700px; float:left;">
+                        Onsdag
+                        20-08-2025 08:15
+                        -
+                                                20-08-2025 18:00
+                        i uge 34
+                                            </div>
+                    <b>                        Specialiseringskursus: Digital Leder - Mundtlig omprøve (DIGIT)
+                        </b>
+                </h3>
+                <div href="/lesson/view/221632"></div>
+                            </div>
+        </div>
+            </div>
+    </div>
+
+<script type="text/javascript">
+    $(".lessons").accordion({
+        autoHeight: false,
+        collapsible: true,
+        active: false,
+        changestart: function (event, ui) {
+            var contentDiv = ui.newContent;
+            if (contentDiv.attr('href') != 'NONE') {
+                contentDiv.load(contentDiv.attr('href') + ' #lesson');
+            }
+        }
+    });
+
+    $('.subClassUnfold').click(function (event) {
+        var $currentTarget = $(event.target || event.srcElement).closest('div').children('.lessons');
+        $currentTarget.toggleClass('hide');
+        //For "fluid" scrolling, though it seems to not always work.
+        // $('html, body').animate({
+        // 	scrollTop: $currentTarget.offset().top
+        // }, 1500);
+        $currentTarget.get(0).scrollIntoView();
+    });
+
+    /**
+     * Hide any classtext items with no values or children.
+     */
+    $(function () {
+        [].forEach.call(document.querySelectorAll('.classtext'), el => {
+            if (el.textContent.trim() === '' && el.children.length === 0) {
+                el.closest('tr').hidden = true;
+            }
+        });
+    });
+
+</script>
+
+</body>
+</html>
